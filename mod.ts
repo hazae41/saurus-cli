@@ -10,6 +10,21 @@ async function handle() {
     return
   }
 
+  if (label === "create") {
+    const [name] = args
+
+    if (!name)
+      throw new Error("create <directory>")
+
+    await read(run(`git clone --recursive https://github.com/saurusmc/saurus ${name}`, "."))
+    return
+  }
+
+  if (label === "update") {
+    await read(run(`git pull -f`))
+    return
+  }
+
   if (label === "start") {
     await readLogs(run("deno run -A --unstable --importmap=imports.json start.ts"))
     return

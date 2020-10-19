@@ -1,6 +1,6 @@
 # Saurus CLI
 
-Command line tools for Saurus. Start Saurus, reload dependencies, manage plugins, show/clear logs.
+Command line tools for Saurus. Install, update, start Saurus, reload dependencies, manage plugins, show/clear logs.
 
 ## Install / Update
 
@@ -8,11 +8,19 @@ Command line tools for Saurus. Start Saurus, reload dependencies, manage plugins
 
 ## Usage
 
+- Create Saurus
+
+      saurus create <directory>
+
+- Update Saurus
+
+      saurus update
+
 - Start Saurus
 
       saurus start
 
-- Reload dependencies
+- Reload and update dependencies
 
       saurus reload
 
