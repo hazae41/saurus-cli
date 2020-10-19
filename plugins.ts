@@ -1,5 +1,5 @@
 import { existsSync } from "https://deno.land/std@0.74.0/fs/exists.ts";
-import { read, root, run } from "./mod.ts";
+import { read, root, run } from "./utils.ts";
 
 export async function install(args: string[]) {
   const [url, name] = args;
