@@ -2,19 +2,19 @@
 
 Command line tools for Saurus. Install, update, start Saurus, reload dependencies, manage plugins, show/clear logs.
 
-## Install / Update
+## Prerequisite (Linux)
 
-- Install git
-      
-      sudo apt install git
+#### Git
 
-- Install Saurus CLI
+    sudo apt install git
 
-      deno install -r -fA --unstable -n saurus https://raw.githubusercontent.com/saurusmc/saurus-cli/master/mod.ts
+## Installation / Update
+
+    deno install -r -fA --unstable -n saurus https://raw.githubusercontent.com/saurusmc/saurus-cli/master/mod.ts
 
 ## Usage
 
-- Create Saurus
+- Create Saurus in `<directory>`
 
       saurus create <directory>
 
