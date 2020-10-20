@@ -1,10 +1,10 @@
 import * as Path from "https://deno.land/std@0.74.0/path/mod.ts";
 import { existsSync } from "https://deno.land/std@0.74.0/fs/exists.ts";
 
-export function run(command: string, path = root()) {
+export function run(cmd: string, cwd?: string) {
   return Deno.run({
-    cwd: path,
-    cmd: command.split(" "),
+    cwd: cwd,
+    cmd: cmd.split(" "),
     stdout: "piped",
     stderr: "piped",
     stdin: "piped"

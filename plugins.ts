@@ -12,8 +12,8 @@ export async function install(args: string[]) {
   if (existsSync(folder))
     throw new Error(`Plugin "${name}" already exists`)
 
-  await read(run(`git submodule add -f ${url} plugins/${name}`))
-  await read(run(`git submodule add -f ${url} plugins/${name}`))
+  await read(run(`git submodule add -f ${url} plugins/${name}`, root()))
+  await read(run(`git submodule add -f ${url} plugins/${name}`, root()))
 }
 
 export async function remove(args: string[]) {
@@ -27,10 +27,10 @@ export async function remove(args: string[]) {
   if (!existsSync(folder))
     throw new Error(`Unknown plugin "${name}"`)
 
-  await read(run(`rm -rf plugins/${name}`))
-  await read(run(`rm -rf .git/modules/plugins/${name}`))
-  await read(run(`git config -f .gitmodules --remove-section submodule.plugins/${name}`))
-  await read(run(`git config -f .git/config --remove-section submodule.plugins/${name}`))
+  await read(run(`rm -rf plugins/${name}`, root()))
+  await read(run(`rm -rf .git/modules/plugins/${name}`, root()))
+  await read(run(`git config -f .gitmodules --remove-section submodule.plugins/${name}`, root()))
+  await read(run(`git config -f .git/config --remove-section submodule.plugins/${name}`, root()))
 }
 
 export async function update(args: string[]) {
