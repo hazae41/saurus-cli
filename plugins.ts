@@ -9,8 +9,8 @@ export async function install(args: string[]) {
 
   const folder = root(`./plugins/${name}`)
 
-  if (!existsSync(folder))
-    throw new Error(`Unknown plugin "${name}"`)
+  if (existsSync(folder))
+    throw new Error(`Plugin "${name}" already exists`)
 
   await read(run(`git submodule add -f ${url} plugins/${name}`))
   await read(run(`git submodule add -f ${url} plugins/${name}`))
