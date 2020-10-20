@@ -16,7 +16,7 @@ async function handle() {
     if (!name)
       throw new Error("create <directory>")
 
-    const cmd `git clone --recursive https://github.com/saurusmc/saurus ${name}`
+    const cmd = `git clone --recursive https://github.com/saurusmc/saurus ${name}`
     await read(run(cmd))
     return
   }
