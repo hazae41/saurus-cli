@@ -84,9 +84,10 @@ async function handle() {
 
 function help() {
   console.log("Available commands:")
+  console.log("- create <directory> - Install Saurus in <directory>")
   console.log("- start - Start Saurus")
   console.log("- reload - Reload dependencies")
-  console.log("- plugins install <url> <name> - Add a plugin")
+  console.log("- plugins install <url> <name> - Install a plugin")
   console.log("- plugins remove <name> - Remove a plugin")
   console.log("- plugins update <name> - Update a plugin")
   console.log("- logs show - Show logs")
