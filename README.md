@@ -4,7 +4,13 @@ Command line tools for Saurus. Install, update, start Saurus, reload dependencie
 
 ## Install / Update
 
-    deno install -r -fA --unstable -n saurus https://raw.githubusercontent.com/saurusmc/saurus-cli/master/mod.ts
+- Install git
+      
+      sudo apt install git
+
+- Install Saurus CLI
+
+      deno install -r -fA --unstable -n saurus https://raw.githubusercontent.com/saurusmc/saurus-cli/master/mod.ts
 
 ## Usage
 
