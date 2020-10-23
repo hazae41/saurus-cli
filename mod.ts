@@ -5,26 +5,6 @@ import { read, readLogs, root, run } from "./utils.ts";
 const [label, ...args] = Deno.args
 
 async function handle() {
-  if (label === "help") {
-    help()
-    return
-  }
-
-  if (label === "create") {
-    const [name] = args
-
-    if (!name)
-      throw new Error("create <directory>")
-
-    const cmd = `git clone --recursive https://github.com/saurusmc/saurus ${name}`
-    await read(run(cmd))
-    return
-  }
-
-  if (label === "update") {
-    await read(run(`git pull -f`, root()))
-    return
-  }
 
   if (label === "start") {
     const cmd = "deno run -A --unstable --importmap=imports.json start.ts"
@@ -79,14 +59,13 @@ async function handle() {
     }
   }
 
-  console.log(`Unknown command. Type "help" for help.`)
+  help()
 }
 
 function help() {
   console.log("Available commands:")
-  console.log("- create <directory> - Install Saurus in <directory>")
   console.log("- start - Start Saurus")
-  console.log("- reload - Reload dependencies")
+  console.log("- reload - Reload imports")
   console.log("- plugins install <url> <name> - Install a plugin")
   console.log("- plugins remove <name> - Remove a plugin")
   console.log("- plugins update <name> - Update a plugin")
