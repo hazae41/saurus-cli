@@ -14,19 +14,11 @@ Command line tools for Saurus. Install, update, start Saurus, reload dependencie
 
 ## Usage
 
-- Create Saurus in `<directory>`
-
-      saurus create <directory>
-
-- Update Saurus
-
-      saurus update
-
 - Start Saurus
 
       saurus start
 
-- Reload and update dependencies
+- Reload and update imports
 
       saurus reload
 
