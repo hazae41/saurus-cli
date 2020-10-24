@@ -1,4 +1,4 @@
-import { existsSync } from "https://deno.land/std@0.74.0/fs/exists.ts";
+import { existsSync } from "https://deno.land/std/fs/exists.ts";
 import { read, root, run } from "./utils.ts";
 
 export async function install(args: string[]) {

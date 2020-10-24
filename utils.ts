@@ -1,5 +1,5 @@
-import * as Path from "https://deno.land/std@0.74.0/path/mod.ts";
-import { existsSync } from "https://deno.land/std@0.74.0/fs/exists.ts";
+import * as Path from "https://deno.land/std/path/mod.ts";
+import { existsSync } from "https://deno.land/std/fs/exists.ts";
 
 export function run(cmd: string, cwd?: string) {
   return Deno.run({
